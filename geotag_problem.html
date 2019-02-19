@@ -1,0 +1,30 @@
+<h3>My Google Maps Demo</h3>
+<!--The div element for the map -->
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkEuc0A8_kq6VY0qklUayZ7TkeIFOKlcs&callback=initMap">
+</script>
+
+<<style media="screen">
+  /* Set the size of the div element that contains the map */
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+</style>
+
+<script type="text/javascript">
+
+  // Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -2.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+
+</script>
